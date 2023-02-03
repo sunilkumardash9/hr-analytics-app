@@ -16,7 +16,7 @@ spec:
       containers:
       - name: streamlitapp
         image: sunilkumardash9/streamlit-app:v1
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
 kind: Service
