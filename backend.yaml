@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hr-api
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: hrapp
+        image: sunilkumardash9/hrapp:v1
+        imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-api
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    app: api
+  ports:
+  - port: 8000
+    targetPort: 8000
+    
