@@ -16,7 +16,7 @@ spec:
       containers:
       - name: hrapp
         image: sunilkumardash9/hrapp:v1
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
 kind: Service
