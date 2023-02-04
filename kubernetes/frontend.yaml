@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit
+  template:
+    metadata:
+      labels:
+        app: streamlit
+    spec:
+      containers:
+      - name: streamlitapp
+        image: sunilkumardash9/streamlit-app:v1
+        imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: streamlit-app
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    app: streamlit
+  ports:
+  - port: 8501
+    targetPort: 8501
+    

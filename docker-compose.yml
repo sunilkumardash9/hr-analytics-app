@@ -1,0 +1,15 @@
+version: "2"
+services:
+  streamlit_app:
+    build: ./streamlit-app
+    ports: 
+      - '8501:8501'
+    
+  hr_app:
+    build: ./hranalytics
+    ports:
+      - '8000:8000'
+    
+    
+
+
