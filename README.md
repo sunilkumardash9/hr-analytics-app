@@ -7,5 +7,5 @@ https://www.analyticsvidhya.com/blog/2023/02/build-and-deploy-an-ml-model-app-us
 
 # GIF Demo
 
-![](https://editor.analyticsvidhya.com/uploads/13274Sc…ecording%202023-02-04%20at%2010.46.01.34%20PM.gif)
+![](https://editor.analyticsvidhya.com/uploads/13274Screen%20Recording%202023-02-04%20at%2010.46.01.34%20PM.gif)
 
